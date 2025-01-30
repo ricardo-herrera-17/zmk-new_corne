@@ -11,25 +11,25 @@
 
 // https://zmk.dev/docs/keymaps/input-processors#input-processors-overview
 
-&mmv_input_listener { input-processors = <&zip_xy_scaler 4 1>; };
+&mmv_input_listener { input-processors = <&zip_xy_scaler 3 1>; };
 
 &msc_input_listener { input-processors = <&zip_xy_scaler 3 1>; };
 
 &msc {
     x-input-code = <INPUT_REL_HWHEEL>;
     y-input-code = <INPUT_REL_WHEEL>;
-    time-to-max-speed-ms = <700>;
+    time-to-max-speed-ms = <200>;
     acceleration-exponent = <1>;
 };
 
 &mmv {
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
-    time-to-max-speed-ms = <700>;
-    acceleration-exponent = <4>;
+    time-to-max-speed-ms = <200>;
+    acceleration-exponent = <3>;
 };
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 5000  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 4000  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 40    // 10
 
 / {
@@ -91,8 +91,8 @@
             display-name = "default";
             bindings = <
 &kp LA(F12)  &kp Q  &kp W        &kp E       &kp R       &kp T                                   &mmv MOVE_UP                     &kp Y      &kp U       &kp I       &kp O        &kp P     &kp BSPC
-&kp LSHIFT   &kp A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &hm LGUI J  &hm LALT K  &hm LCTRL L  &kp SEMI  &mt LSHIFT SQT
-&kp LA(F11)  &kp Z  &kp X        &kp C       &kp V       &kp B      &mkp RCLK                    &mmv MOVE_DOWN                   &kp N      &kp M       &kp COMMA   &kp DOT      &kp FSLH  &kp ESC
+&kp LSHIFT   &kp A  &kp S  &kp D  &kp F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H           &kp J      &kp K  &kp L  &kp SEMI  &mt LSHIFT SQT
+&kp LA(F11)  &kp Z  &hm LCTRL X        &hm LALT C       &hm LGUI V       &kp B      &mkp RCLK                    &mmv MOVE_DOWN   &kp N      &hm LGUI M       &hm LALT COMMA   &hm LCTRL DOT      &kp FSLH  &kp ESC
                                  &mo_1_gui   &mo 1       &kp SPACE                                                                &kp ENTER  &mo 2       &mo 3
             >;
 
