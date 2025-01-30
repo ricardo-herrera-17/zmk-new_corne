@@ -17,7 +17,7 @@ layers:
   - A
   - S
   - D
-  - F
+  - {t: F, h: LGUI}
   - G
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
