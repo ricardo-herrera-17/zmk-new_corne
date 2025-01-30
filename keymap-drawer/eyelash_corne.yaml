@@ -1,6 +1,6 @@
 layers:
   default:
-  - LALT(F12)
+  - Alt+F12
   - Q
   - W
   - E
@@ -28,7 +28,7 @@ layers:
   - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ;, s: ':'}
   - {t: '''', h: '$$mdi:apple-keyboard-shift$$', s: '"'}
-  - LALT(F11)
+  - Alt+F11
   - Z
   - X
   - C
