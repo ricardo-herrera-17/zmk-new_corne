@@ -16,6 +16,13 @@
     input-processors = <&zip_xy_scaler 2 1>;
 };
 
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <700>;
+    acceleration-exponent = <2>;
+};
+
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
@@ -47,13 +54,6 @@
         compatible = "zmk,behavior-sensor-rotate-var";
         #sensor-binding-cells = <2>;
         bindings = <&kp>, <&kp>;
-    };
-
-    &mmv {
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        time-to-max-speed-ms = <700>;
-        acceleration-exponent = <2>;
     };
 
     keymap {
