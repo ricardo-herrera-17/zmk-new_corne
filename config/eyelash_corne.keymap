@@ -96,16 +96,16 @@
                                  &mo_1_gui   &mo 1       &kp SPACE                                                                &kp ENTER  &mo 2       &mo 3
             >;
 
-            sensor-bindings = <&scroll_encoder C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&scroll_encoder K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         layer_1 {
             display-name = "layer_1";
             bindings = <
-&kp TAB      &kp N1           &kp N2          &kp N3     &kp N4     &kp N5                               &msc SCRL_UP                     &kp N6          &kp N7          &kp N8        &kp N9         &kp N0  &kp DEL
-&kp LSHIFT   &kp LS(LG(D))    &kp LS(LG(V))   &kp LG(V)  &kp LG(C)  &none                &msc SCRL_LEFT  &mkp LCLK       &msc SCRL_RIGHT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &none   &kp PG_UP
-&bootloader  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans     &trans     &none   &mkp RCLK                    &msc SCRL_DOWN                   &kp LA(LEFT)    &kp LA(RIGHT)   &kp LG(LEFT)  &kp LG(RIGHT)  &none   &kp PG_DN
-                                              &trans     &trans     &trans                                                                &kp INS         &trans          &trans
+&kp TAB      &kp N1         &kp N2             &kp N3           &kp N4       &kp N5                                          &msc SCRL_UP                     &kp N6          &kp N7          &kp N8        &kp N9         &kp N0           &kp DEL
+&kp LSHIFT   &kp LS(LG(D))  &kp LS(LG(V))      &kp LG(V)        &kp LG(C)    &none                           &msc SCRL_LEFT  &mkp LCLK       &msc SCRL_RIGHT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &rgb_ug RGB_TOG  &kp PG_UP
+&bootloader  &kp LS(LG(T))  &kp LC(LA(LG(D)))  &kp LS(LC(TAB))  &kp LC(TAB)  &kp LC(LA(LG(R)))  &mkp RCLK                    &msc SCRL_DOWN                   &kp LA(LEFT)    &kp LA(RIGHT)   &kp LG(LEFT)  &kp LG(RIGHT)  &none            &kp PG_DN
+                                               &trans           &trans       &trans                                                                           &kp INS         &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -127,7 +127,7 @@
             display-name = "layer_3";
             bindings = <
 &kp F1       &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                                      &mmv MOVE_UP                     &kp F7      &kp F8  &kp F9       &kp F10     &kp F11     &kp F12
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bl BL_TOG  &none   &mkp MCLK    &mkp RCLK   &none       &none
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bl BL_TOG  &none   &none        &none       &none       &none
 &bootloader  &sys_reset    &trans        &bootloader   &trans        &none         &kp C_MUTE                    &mmv MOVE_DOWN                   &trans      &trans  &bootloader  &sys_reset  &sys_reset  &bootloader
                                          &trans        &trans        &trans                                                                       &trans      &trans  &trans
             >;
