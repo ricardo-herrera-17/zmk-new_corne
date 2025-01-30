@@ -27,6 +27,14 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -41,6 +49,13 @@
         bindings = <&kp>, <&kp>;
     };
 
+    &mmv {
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        time-to-max-speed-ms = <700>;
+        acceleration-exponent = <2>;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -48,7 +63,7 @@
             display-name = "default";
             bindings = <
 &kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &mmv MOVE_UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S      &kp D     &kp F  &kp G                    &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&td0       &kp A  &kp S      &kp D     &hm LGUI F  &kp G                    &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LGUI   &kp Z  &kp X      &kp C     &kp V  &kp B       &mkp RCLK              &mmv MOVE_DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                              &mo 3  &mo 1  &lt 3 SPACE                                              &lt 3 ENTER  &mo 2  &mo 3
             >;
