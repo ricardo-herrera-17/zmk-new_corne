@@ -27,7 +27,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ;, s: ':'}
-  - '&td0'
+  - {t: '''', h: '$$mdi:apple-keyboard-shift$$', s: '"'}
   - LALT(F11)
   - Z
   - X
