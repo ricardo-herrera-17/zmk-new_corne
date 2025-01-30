@@ -38,7 +38,7 @@
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate-var";
         #sensor-binding-cells = <2>;
-        bindings = <&msc>, <&msc>;
+        bindings = <&kp>, <&kp>;
     };
 
     keymap {
@@ -52,15 +52,15 @@
 &kp LGUI   &kp Z  &kp X      &kp C     &kp V  &kp B       &mkp RCLK              &mmv MOVE_DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                              &mo 3  &mo 1  &lt 3 SPACE                                              &lt 3 ENTER  &mo 2  &mo 3
             >;
-            sensor-bindings = <&scroll_encoder SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&scroll_encoder PG_UP PG_DN>;
         };
 
         layer_1 {
             display-name = "layer_1";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                        &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
+&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                        &msc SCRL_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
+&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                           &msc SCRL_LEFT  &mkp LCLK       &msc SCRL_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &mkp RCLK                    &msc SCRL_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
                                          &trans        &trans        &trans                                                                         &kp INS          &kp DEL          &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
