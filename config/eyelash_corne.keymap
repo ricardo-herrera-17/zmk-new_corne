@@ -6,7 +6,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 50    // default: 10
 
 #include <dt-bindings/zmk/pointing.h>
 //&mmv_input_listener { input-processors = <&zip_xy_scaler 5 1>; };
@@ -14,12 +14,12 @@
 &mmv_input_listener {
     mouse_fast {
         layers = <3>;
-        input-processors = <&zip_xy_scaler 4 1>;
+        input-processors = <&zip_xy_scaler 3 1>;
     };
 
     mouse_slow {
         layers = <0>;
-        input-processors = <&zip_xy_scaler 1 2>;
+        input-processors = <&zip_xy_scaler 1 3>;
     };
 };
 
@@ -56,9 +56,10 @@
     };
 
     scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate-var";
-        #sensor-binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        tap-ms = <20>;
     };
 
     macros {
