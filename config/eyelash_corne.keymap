@@ -18,19 +18,19 @@
 &msc {
     x-input-code = <INPUT_REL_HWHEEL>;
     y-input-code = <INPUT_REL_WHEEL>;
-    time-to-max-speed-ms = <200>;
-    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <100>;
+    acceleration-exponent = <2>;
 };
 
 &mmv {
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
-    time-to-max-speed-ms = <200>;
+    time-to-max-speed-ms = <50>;
     acceleration-exponent = <3>;
 };
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 4000  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 40    // 10
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 5000  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100    // 10
 
 / {
     behaviors {
@@ -96,7 +96,7 @@
                                  &mo_1_gui   &mo 1       &kp SPACE                                                                &kp ENTER  &mo 2       &mo 3
             >;
 
-            sensor-bindings = <&scroll_encoder K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&scroll_encoder PG_UP PG_DN>;
         };
 
         layer_1 {
@@ -105,7 +105,7 @@
 &kp TAB      &kp N1         &kp N2         &kp N3           &kp N4       &kp N5                               &msc SCRL_UP                     &kp N6          &kp N7          &kp N8        &kp N9         &kp N0           &kp DEL
 &kp LSHIFT   &kp LS(LG(D))  &kp LS(LG(V))  &kp LG(V)        &kp LG(C)    &none                &msc SCRL_LEFT  &mkp LCLK       &msc SCRL_RIGHT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &rgb_ug RGB_TOG  &kp PG_UP
 &bootloader  &kp LC(LEFT)   &kp LC(RIGHT)  &kp LS(LC(TAB))  &kp LC(TAB)  &none   &mkp RCLK                    &msc SCRL_DOWN                   &kp LA(LEFT)    &kp LA(RIGHT)   &kp LG(LEFT)  &kp LG(RIGHT)  &none            &kp PG_DN
-                                           &trans           &trans       &trans                                                                &kp INS         &trans          &trans
+                                           &none           &none       &none                                                                &kp INS         &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -116,8 +116,8 @@
             bindings = <
 &kp TAB           &kp EXCL          &kp AT             &kp HASH        &kp DLLR         &kp PRCNT                                 &mmv MOVE_UP                     &kp CARET           &kp AMPS       &kp ASTRK           &kp LPAR             &kp RPAR  &kp DEL
 &mt LSHIFT TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp UNDERSCORE            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT            &kp DOWN       &kp UP              &kp RIGHT            &none     &none
-&kp GRAVE         &kp BACKSLASH     &kp PIPE           &kp EQUAL       &kp PLUS         &kp MINUS       &trans                    &mmv MOVE_DOWN                   &kp LA(LEFT_ARROW)  &kp LA(RIGHT)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &none     &bootloader
-                                                       &trans          &trans           &trans                                                                     &trans              &trans         &trans
+&kp GRAVE         &kp BACKSLASH     &kp PIPE           &kp EQUAL       &kp PLUS         &kp MINUS       &none                    &mmv MOVE_DOWN                   &kp LA(LEFT_ARROW)  &kp LA(RIGHT)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &none     &bootloader
+                                                       &none          &none           &none                                                                     &none              &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
@@ -128,8 +128,8 @@
             bindings = <
 &kp F1       &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                                        &mmv MOVE_UP                     &kp F7      &kp F8  &kp F9       &kp F10     &kp F11     &kp F12
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bl BL_TOG  &none   &none        &none       &none       &none
-&bootloader  &sys_reset    &trans        &bootloader   &trans        &studio_unlock  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans      &trans  &bootloader  &sys_reset  &sys_reset  &bootloader
-                                         &trans        &trans        &trans                                                                         &trans      &trans  &trans
+&bootloader  &sys_reset    &none        &none   &none        &studio_unlock  &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &none  &none  &sys_reset  &sys_reset  &bootloader
+                                         &none        &none        &none                                                                         &none      &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
