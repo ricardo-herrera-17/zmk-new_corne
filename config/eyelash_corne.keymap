@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1300  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1400  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80    // default: 10
 
 #include <dt-bindings/zmk/pointing.h>
@@ -83,10 +83,11 @@
         default_layer {
             display-name = "default";
             bindings = <
-&kp LA(F12)  &kp Q  &kp W        &kp E       &kp R       &kp T                                   &mmv MOVE_UP                     &kp Y      &kp U       &kp I       &kp O        &kp P     &kp BSPC
-&kp LSHIFT   &kp A  &kp S  &kp D  &kp F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H           &kp J      &kp K  &kp L  &kp SEMI  &mt LSHIFT SQT
-&kp LA(F11)  &kp Z  &hm LCTRL X        &hm LALT C       &hm LGUI V       &kp B      &mkp RCLK                    &mmv MOVE_DOWN   &kp N      &hm LGUI M       &hm LALT COMMA   &hm LCTRL DOT      &kp FSLH  &kp ESC
-                                 &mo_3_gui   &mo 1       &kp SPACE                                                                &kp ENTER  &mo 2       &mo 3
+//  1      |    2|    3      |    4     |    5     |    6     |####                                         ####|    1    |    2     |    3         |    4        |    5   |    6
+&kp LA(F12) &kp Q &kp W       &kp E      &kp R      &kp T                      &mmv MOVE_UP                      &kp Y     &kp U      &kp I          &kp O         &kp P    &kp BSPC
+&kp LSHIFT  &kp A &kp S       &kp D      &kp F      &kp G       &mmv MOVE_LEFT &mkp LCLK      &mmv MOVE_RIGHT    &kp H     &kp J      &kp K          &kp L         &kp SEMI &mt LSHIFT SQT
+&kp LA(F11) &kp Z &hm LCTRL X &hm LALT C &hm LGUI V &kp B       &mkp RCLK      &mmv MOVE_DOWN                    &kp N     &hm LGUI M &hm LALT COMMA &hm LCTRL DOT &kp FSLH &kp ESC
+                              &mo_3_gui  &mo 1      &kp SPACE                                                    &kp ENTER &mo 2      &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
@@ -95,10 +96,11 @@
         layer_1 {
             display-name = "layer_1";
             bindings = <
-&none      &kp N1         &kp N2         &kp N3           &kp N4       &kp N5                               &msc SCRL_DOWN                     &kp N6          &kp N7          &kp N8        &kp N9         &kp N0           &kp DEL
-&kp LSHIFT   &kp LS(LG(D))  &kp LS(LG(V))  &kp LG(V)        &kp LG(C)    &none                &msc SCRL_LEFT  &mkp LCLK       &msc SCRL_RIGHT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &rgb_ug RGB_TOG  &kp PG_UP
-&bootloader  &kp LC(LEFT)   &kp LC(RIGHT)  &kp LS(LC(TAB))  &kp LC(TAB)  &none   &mkp RCLK                    &msc SCRL_UP                   &kp LA(LEFT)    &kp LA(RIGHT)   &kp LG(LEFT)  &kp LG(RIGHT)  &none            &kp PG_DN
-                                           &none           &none       &none                                                                &kp INS         &none          &none
+//  1      |    2        |    3        |    4          |    5      |    6  |####                                       ####|     1         |    2         |    3        |    4        |    5          |    6
+&none       &kp N1        &kp N2        &kp N3          &kp N4      &kp N5                   &msc SCRL_DOWN                  &kp N6         &kp N7         &kp N8        &kp N9        &kp N0          &kp DEL
+&kp LSHIFT  &kp LS(LG(D)) &kp LS(LG(V)) &kp LG(V)       &kp LG(C)   &none    &msc SCRL_RIGHT &mkp LCLK      &msc SCRL_LEFT   &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW  &kp RIGHT     &rgb_ug RGB_TOG &kp PG_UP
+&bootloader &kp LC(LEFT)  &kp LC(RIGHT) &kp LS(LC(TAB)) &kp LC(TAB) &none    &mkp RCLK       &msc SCRL_UP                    &kp LA(LEFT)   &kp LA(RIGHT)  &kp LG(LEFT)  &kp LG(RIGHT) &none           &kp PG_DN
+                                        &none           &none       &none                                                    &none          &none          &none
             >;
 
             sensor-bindings = <&rgb_encoder>;
@@ -107,10 +109,11 @@
         layer_2 {
             display-name = "layer_2";
             bindings = <
-&kp TAB           &kp EXCL          &kp AT             &kp HASH        &kp DLLR         &kp PRCNT                                 &mmv MOVE_UP                     &kp CARET           &kp AMPS       &kp ASTRK           &kp LPAR             &kp RPAR  &kp DEL
-&mt LSHIFT TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp UNDERSCORE            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT            &kp DOWN       &kp UP              &kp RIGHT            &none     &none
-&kp GRAVE         &kp BACKSLASH     &kp PIPE           &kp EQUAL       &kp PLUS         &kp MINUS       &none                    &mmv MOVE_DOWN                   &kp LA(LEFT_ARROW)  &kp LA(RIGHT)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &none     &bootloader
-                                                       &none          &none           &none                                                                     &none              &none         &none
+//  1           |    2           |    3            |    4         |    5          |    6          |####                                       ####|     1             |    2        |    3             |    4              |    5   |    6
+&kp TAB          &kp EXCL         &kp AT            &kp HASH       &kp DLLR        &kp PRCNT                       &mmv MOVE_UP                     &kp CARET          &kp AMPS      &kp ASTRK          &kp LPAR            &kp RPAR &kp DEL
+&mt LSHIFT TILDE &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_BRACE &kp RIGHT_BRACE &kp UNDERSCORE   &mmv MOVE_LEFT &mkp LCLK      &mmv MOVE_RIGHT   &kp LEFT           &kp DOWN      &kp UP             &kp RIGHT           &none    &none
+&kp GRAVE        &kp BACKSLASH    &kp PIPE          &kp EQUAL      &kp PLUS        &kp MINUS        &none          &mmv MOVE_DOWN                   &kp LA(LEFT_ARROW) &kp LA(RIGHT) &kp LG(LEFT_ARROW) &kp LG(RIGHT_ARROW) &none    &bootloader
+                                                    &LCTRL         &LALT           &LGUI                                                            &none              &none         &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -119,12 +122,12 @@
         layer_3 {
             display-name = "layer_3";
             bindings = <
-&kp TAB      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                   &mmv MOVE_UP                    &kp F6  &kp F7      &kp F8  &kp F9       &kp F10     &kp F11
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bl BL_TOG  &none   &none        &none       &none       &none
-&bootloader  &sys_reset    &none         &none         &none         &studio_unlock  &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &none  &none  &sys_reset  &sys_reset  &bootloader
-                                         &none        &none        &none                                                                         &none      &none  &none
+//  1     |    2       |    3       |    4       |    5       |    6        |####                                        ####|     1     |    2 |    3 |    4 |    5      |    6
+&kp TAB    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                        &mmv MOVE_UP                     &kp F6     &kp F7 &kp F8 &kp F9 &kp F10     &kp F11
+&none      &none        &none        &none        &none        &none          &mmv MOVE_LEFT &mkp LCLK      &mmv MOVE_RIGHT   &bl BL_TOG &none  &none  &none  &none       &none
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp C_MUTE     &mmv MOVE_DOWN                   &none      &none  &none  &none  &sys_reset  &bootloader
+                                     &none        &none        &none                                                          &none      &none  &none
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
     };
