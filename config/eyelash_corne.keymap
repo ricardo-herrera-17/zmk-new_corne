@@ -11,7 +11,7 @@
 
 // https://zmk.dev/docs/keymaps/input-processors#input-processors-overview
 
-&mmv_input_listener { input-processors = <&zip_xy_scaler 5 1>; };
+//&mmv_input_listener { input-processors = <&zip_xy_scaler 5 1>; };
 
 &msc_input_listener { input-processors = <&zip_xy_scaler 5 1>; };
 
@@ -26,10 +26,10 @@
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
     time-to-max-speed-ms = <1>;
-    acceleration-exponent = <1>;
+    acceleration-exponent = <10>;
 };
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 100  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 20  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 5000    // 10
 
 / {
