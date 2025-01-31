@@ -42,7 +42,7 @@ layers:
   - {t: ., h: '$$mdi:apple-keyboard-control$$', s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
-  - '&mo_1_gui'
+  - '&mo_3_gui'
   - layer_1
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
