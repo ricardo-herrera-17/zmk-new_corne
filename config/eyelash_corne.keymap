@@ -10,10 +10,15 @@
 //&mmv_input_listener { input-processors = <&zip_xy_scaler 5 1>; };
 
 &mmv_input_listener {
-    set_mouse_fast {
+    mouse_fast {
         layers = <3>;
         input-processors = <&zip_xy_scaler 4 1>;
     };
+
+    mouse_slow {
+        layers = <0>;
+        input-processors = <&zip_xy_scaler 1 2>;
+    }
 };
 
 &msc_input_listener { input-processors = <&zip_xy_scaler 5 1>; };
@@ -30,8 +35,8 @@
     acceleration-exponent = <5>;
 };
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 5000    // 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
 
 / {
     behaviors {
@@ -114,9 +119,9 @@
         layer_3 {
             display-name = "layer_3";
             bindings = <
-&kp TAB &kp F1       &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                                        &mmv MOVE_UP                     &kp F7      &kp F8  &kp F9       &kp F10     &kp F11
+&kp TAB      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                   &mmv MOVE_UP                    &kp F6  &kp F7      &kp F8  &kp F9       &kp F10     &kp F11
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bl BL_TOG  &none   &none        &none       &none       &none
-&bootloader  &sys_reset    &none        &none   &none        &studio_unlock  &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &none  &none  &sys_reset  &sys_reset  &bootloader
+&bootloader  &sys_reset    &none         &none         &none         &studio_unlock  &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &none  &none  &sys_reset  &sys_reset  &bootloader
                                          &none        &none        &none                                                                         &none      &none  &none
             >;
 
