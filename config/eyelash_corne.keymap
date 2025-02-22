@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80    // default: 10
 
 #include <dt-bindings/zmk/pointing.h>
@@ -42,7 +42,7 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -99,7 +99,8 @@
 &none       &kp N1        &kp N2        &kp N3          &kp N4      &kp N5                   &msc SCRL_DOWN                  &kp N6         &kp N7         &kp N8        &kp N9        &kp N0          &kp DEL
 &kp LSHIFT  &kp LS(LG(D)) &kp LS(LG(V)) &kp LG(V)       &kp LG(C)   &none    &msc SCRL_RIGHT &mkp LCLK      &msc SCRL_LEFT   &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW  &kp RIGHT     &rgb_ug RGB_TOG &kp PG_UP
 &bootloader &kp LC(LEFT)  &kp LC(RIGHT) &kp LS(LC(TAB)) &kp LC(TAB) &none    &mkp RCLK       &msc SCRL_UP                    &kp LA(LEFT)   &kp LA(RIGHT)  &kp LG(LEFT)  &kp LG(RIGHT) &none           &kp PG_DN
-                                        &none           &none       &none                                                    &none          &none          &none
+                                        &none           &none       &none                                                    &kp LGUI       &kp LALT       &kp LCTRL 
+
             >;
             sensor-bindings = <&rgb_encoder>;
         };
@@ -119,11 +120,11 @@
         layer_3 {
             display-name = "layer_3";
             bindings = <
-//  1     |    2       |    3       |    4       |    5       |    6        |####                                        ####|     1     |    2 |    3 |    4 |    5      |    6
-&kp TAB    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                        &mmv MOVE_UP                     &kp F6     &kp F7 &kp F8 &kp F9 &kp F10     &kp F11
-&none      &none        &none        &none        &none        &none          &mmv MOVE_LEFT &mkp LCLK      &mmv MOVE_RIGHT   &bl BL_TOG &none  &none  &none  &none       &none
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp C_MUTE     &mmv MOVE_DOWN                   &none      &none  &none  &none  &sys_reset  &bootloader
-                                     &none        &none        &none                                                          &none      &none  &none
+//  1     |    2       |    3       |    4       |    5       |    6        |####                                        ####|     1     |    2   |    3 | 4 |        5|    6
+&kp TAB    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                        &mmv MOVE_UP                     &kp F6     &kp F7    &kp F8    &kp F9     &kp F10     &kp F11
+&none      &none        &none        &none        &none        &none          &mmv MOVE_LEFT &mkp LCLK      &mmv MOVE_RIGHT   &none      &kp LGUI  &kp LALT  &kp LCTRL  &none       &none
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp C_MUTE     &mmv MOVE_DOWN                   &none      &none     &none     &none      &sys_reset  &bootloader
+                                     &none        &none        &none                                                          &none      &none     &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
