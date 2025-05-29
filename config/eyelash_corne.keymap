@@ -19,7 +19,7 @@
 
     mouse_normal {
         layers = <1>;
-        input-processors = <&zip_xy_scaler 1 2>;
+        input-processors = <&zip_xy_scaler 1 1>;
     };
 
     mouse_slow {
@@ -39,7 +39,7 @@
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
     time-to-max-speed-ms = <1>;
-    acceleration-exponent = <4>;
+    acceleration-exponent = <5>;
 };
 
 / {
