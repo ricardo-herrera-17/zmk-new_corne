@@ -56,7 +56,7 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - '&msc MOVE_UP'
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -69,9 +69,9 @@ layers:
   - {t: V, h: '$$mdi:apple-keyboard-command$$'}
   - {t: C, h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&msc MOVE_LEFT'
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
-  - '&msc MOVE_RIGHT'
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
@@ -85,7 +85,7 @@ layers:
   - Ctl+$$mdi:keyboard-tab$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:mouse-right-click-outline$$
-  - '&msc MOVE_DOWN'
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - Alt+$$mdi:arrow-left-bold$$
   - Alt+$$mdi:arrow-right-bold$$
   - Gui+$$mdi:arrow-left-bold$$
@@ -105,7 +105,7 @@ layers:
   - '#'
   - $
   - '%'
-  - '&mmv SCRL_DOWN'
+  - $$mdi:pan-down$$
   - ^
   - '&'
   - '*'
@@ -118,9 +118,9 @@ layers:
   - '{'
   - '}'
   - _
-  - '&mmv SCRL_RIGHT'
+  - $$mdi:pan-right$$
   - $$mdi:mouse-left-click-outline$$
-  - '&mmv SCRL_LEFT'
+  - $$mdi:pan-left$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
@@ -134,7 +134,7 @@ layers:
   - +
   - {t: '-', s: _}
   - RGB TOG
-  - '&mmv SCRL_UP'
+  - $$mdi:pan-up$$
   - Alt+$$mdi:arrow-left-bold$$
   - Alt+$$mdi:arrow-right-bold$$
   - Gui+$$mdi:arrow-left-bold$$
