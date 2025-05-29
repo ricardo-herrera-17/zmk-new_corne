@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: eyelash_corne}
 layers:
   default:
   - Alt+F12
@@ -55,7 +56,7 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - $$mdi:pan-down$$
+  - '&msc MOVE_UP'
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -68,9 +69,9 @@ layers:
   - {t: V, h: '$$mdi:apple-keyboard-command$$'}
   - {t: C, h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:pan-right$$
+  - '&msc MOVE_LEFT'
   - $$mdi:mouse-left-click-outline$$
-  - $$mdi:pan-left$$
+  - '&msc MOVE_RIGHT'
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
@@ -84,7 +85,7 @@ layers:
   - Ctl+$$mdi:keyboard-tab$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:mouse-right-click-outline$$
-  - $$mdi:pan-up$$
+  - '&msc MOVE_DOWN'
   - Alt+$$mdi:arrow-left-bold$$
   - Alt+$$mdi:arrow-right-bold$$
   - Gui+$$mdi:arrow-left-bold$$
@@ -104,7 +105,7 @@ layers:
   - '#'
   - $
   - '%'
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - '&mmv SCRL_DOWN'
   - ^
   - '&'
   - '*'
@@ -117,9 +118,9 @@ layers:
   - '{'
   - '}'
   - _
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - '&mmv SCRL_RIGHT'
   - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - '&mmv SCRL_LEFT'
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
@@ -132,8 +133,8 @@ layers:
   - {t: '=', s: +}
   - +
   - {t: '-', s: _}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - RGB TOG
+  - '&mmv SCRL_UP'
   - Alt+$$mdi:arrow-left-bold$$
   - Alt+$$mdi:arrow-right-bold$$
   - Gui+$$mdi:arrow-left-bold$$
