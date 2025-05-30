@@ -24,11 +24,11 @@
 
     mouse_slow {
         layers = <3>;
-        input-processors = <&zip_xy_scaler 1 4>;
+        input-processors = <&zip_xy_scaler 1 5>;
     };
 };
 
-&msc_input_listener { input-processors = <&zip_xy_scaler 5 1>; };
+&msc_input_listener { input-processors = <&zip_xy_scaler 4 1>; };
 
 &msc {
     time-to-max-speed-ms = <1>;
