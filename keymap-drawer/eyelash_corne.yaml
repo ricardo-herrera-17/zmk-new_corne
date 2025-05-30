@@ -105,7 +105,7 @@ layers:
   - '#'
   - $
   - '%'
-  - $$mdi:pan-down$$
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - ^
   - '&'
   - '*'
@@ -118,9 +118,9 @@ layers:
   - '{'
   - '}'
   - _
-  - $$mdi:pan-right$$
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
-  - $$mdi:pan-left$$
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
@@ -134,7 +134,7 @@ layers:
   - +
   - {t: '-', s: _}
   - RGB TOG
-  - $$mdi:pan-up$$
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - Alt+$$mdi:arrow-left-bold$$
   - Alt+$$mdi:arrow-right-bold$$
   - Gui+$$mdi:arrow-left-bold$$
