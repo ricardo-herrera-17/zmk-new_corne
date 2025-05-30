@@ -24,7 +24,7 @@
 
     mouse_slow {
         layers = <2>;
-        input-processors = <&zip_xy_scaler 1 5>;
+        input-processors = <&zip_xy_scaler 1 4>;
     };
 };
 
