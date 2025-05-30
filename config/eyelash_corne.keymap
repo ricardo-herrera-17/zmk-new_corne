@@ -12,6 +12,10 @@
 //&mmv_input_listener { input-processors = <&zip_xy_scaler 5 1>; };
 
 &mmv_input_listener {
+    mouse_fast {
+        layers = <1>;
+        input-processors = <&zip_xy_scaler 3 1>;
+    };
 
     mouse_normal {
         layers = <0>;
@@ -19,7 +23,7 @@
     };
 
     mouse_slow {
-        layers = <1>;
+        layers = <2>;
         input-processors = <&zip_xy_scaler 1 5>;
     };
 };
@@ -35,7 +39,7 @@
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
     time-to-max-speed-ms = <1>;
-    acceleration-exponent = <5>;
+    acceleration-exponent = <4>;
 };
 
 / {
@@ -116,10 +120,10 @@
             display-name = "layer_2";
             bindings = <
 //  1           |    2           |    3            |    4         |    5          |    6          |####                                         ####|     1             |    2        |    3             |    4              |    5   |    6
-&kp TAB          &kp EXCL         &kp AT            &kp HASH       &kp DLLR        &kp PRCNT                         &msc SCRL_DOWN                   &kp CARET          &kp AMPS      &kp ASTRK          &kp LPAR            &kp RPAR &kp DEL
-&mt LSHIFT TILDE &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_BRACE &kp RIGHT_BRACE &kp UNDERSCORE   &msc SCRL_RIGHT  &mkp LCLK      &msc SCRL_LEFT    &kp LEFT           &kp DOWN      &kp UP             &kp RIGHT           &none    &none
-&kp GRAVE        &kp BACKSLASH    &kp PIPE          &kp EQUAL      &kp PLUS        &kp MINUS        &rgb_ug RGB_TOG  &msc SCRL_UP                     &kp LA(LEFT_ARROW) &kp LA(RIGHT) &kp LG(LEFT_ARROW) &kp LG(RIGHT_ARROW) &none    &bootloader
-                                                    &kp LCTRL      &kp LALT        &kp LGUI                                                           &none              &none         &none
+&kp TAB          &kp EXCL         &kp AT            &kp HASH       &kp DLLR        &kp PRCNT                         &mmv MOVE_UP                    &kp CARET          &kp AMPS      &kp ASTRK          &kp LPAR            &kp RPAR &kp DEL
+&mt LSHIFT TILDE &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_BRACE &kp RIGHT_BRACE &kp UNDERSCORE   &mmv MOVE_LEFT   &mkp LCLK      &mmv MOVE_RIGHT  &kp LEFT           &kp DOWN      &kp UP             &kp RIGHT           &none    &none
+&kp GRAVE        &kp BACKSLASH    &kp PIPE          &kp EQUAL      &kp PLUS        &kp MINUS        &rgb_ug RGB_TOG  &mmv MOVE_DOWN                  &kp LA(LEFT_ARROW) &kp LA(RIGHT) &kp LG(LEFT_ARROW) &kp LG(RIGHT_ARROW) &none    &bootloader
+                                                    &kp LCTRL      &kp LALT        &kp LGUI                                                          &none              &none         &none
             >;
             sensor-bindings = <&scroll_vert>;
         };
