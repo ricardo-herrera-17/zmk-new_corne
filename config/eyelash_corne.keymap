@@ -19,11 +19,11 @@
 
     mouse_slow {
         layers = <0>;
-        input-processors = <&zip_xy_scaler 1 4>;
+        input-processors = <&zip_xy_scaler 1 5>;
     };
 
     mouse_faster {
-        layers = <3>;
+        layers = <2>;
         input-processors = <&zip_xy_scaler 2 1>;
     };
 };
@@ -39,7 +39,7 @@
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
     time-to-max-speed-ms = <1>;
-    acceleration-exponent = <4>;
+    acceleration-exponent = <5>;
 };
 
 / {
@@ -131,11 +131,11 @@
         layer_3 {
             display-name = "layer_3";
             bindings = <
-//  1     |    2       |    3       |    4       |    5       |    6        |####                                        ####|     1     |    2   |    3 | 4 |        5|    6
-&kp TAB    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                        &mmv MOVE_UP                     &kp F6     &kp F7    &kp F8    &kp F9     &kp F10     &kp F11
-&none      &none        &none        &none        &none        &none          &mmv MOVE_LEFT &mkp LCLK      &mmv MOVE_RIGHT   &none      &kp LGUI  &kp LALT  &kp LCTRL  &none       &none
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp C_MUTE     &mmv MOVE_DOWN                   &none      &none     &none     &none      &sys_reset  &none
-                                     &none        &none        &none                                                          &none      &none     &none
+//  1     |    2       |    3       |    4       |    5       |    6        |####                                        ####|     1     |    2    |    3     |     4    |     5     |    6
+&kp TAB    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                        &mmv MOVE_UP                     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
+&kp LSHIFT &kp LC(F1)   &kp LC(F2)   &kp LC(F3)   &kp LC(F4)   &kp LC(F5)     &mmv MOVE_LEFT &mmv LCLK      &mmv MOVE_RIGHT   &kp LC(F6) &kp LC(F7) &kp LC(F8) &kp LC(F9) &kp LC(F10) &kp LC(F11)
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp C_MUTE     &mmv MOVE_DOWN                   &none      &none      &none      &none      &sys_reset  &none
+                                     &kp LCTRL    &kp LALT     &kp LGUI                                                       &kp LGUI   &kp LALT   &kp LCTRL
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
